@@ -1,0 +1,604 @@
+body {
+	color: #474747;
+	font-weight: normal;
+	font-style: normal;
+	height:auto;
+	margin: auto;	
+	min-width: 1024px;
+	/*background-color: #f9f9f9;*/
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+#header {
+	height: 75px;
+}
+
+.navbar-inner {
+	box-shadow: 0px 0 7px rgba(0,0,0,0.8);
+	border-bottom: solid 1px #383838;
+}
+
+.navbar .divider-vertical {
+	height: 55px;
+	margin: 0;
+}
+
+.navbar .nav > li > a {
+	padding-top: 16px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+
+.navbar .nav > li > a:hover {
+	/* background: -webkit-linear-gradient (rgba(255,255,255,0) 100%, rgba(255,255,255,0.2) 0%);*/
+}
+
+#about {
+	width: 30px;
+	padding-top: 14px;
+	margin: 0;
+}
+
+#title {
+	color: white;
+}
+
+#logoImg {
+	float: left;
+	margin: auto;
+	padding-top: 5px;
+	margin-right: 5px;	
+}
+
+#title a {
+	padding-top: 20px;
+	margin-left: 10px;
+	width: 160px;
+	font-size: 35px;
+	color: white;
+	font-family: Lobster, serif;
+	text-shadow: inset 0px 0 1px black;
+	background: transparent;
+}
+
+#title a:hover {
+	color: white;
+}
+
+#beta {
+	border-size: 0px;
+	border-style: none;
+	background: inherit;
+	border-radius: 0px;
+	margin-right: 0;
+	padding-top: 20px;
+	font-size: 16px;
+}
+#beta:hover {
+	border-bottom: none;
+	color: white;
+}
+
+/* 
+#popupClose - this is referring to the anchor tag inside the popup conatainer. 
+We'll absolute position and style it here 
+*/  
+#popupClose{    
+    z-index: 100004;
+	background: transparent url(http://widget.uservoice.com/images/clients/widget2/close.png) 0 0 no-repeat;
+	height: 48px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: -22px;
+	right: -24px;
+	width: 48px;  
+}  
+  
+/* 
+#bgPopup - this is referring to the element that will cover the whole page  
+behind the popup and above the rest of the page. 
+NOTE: if you are using z-index on the same level in the DOM -  
+    #bgPopup z-index needs to have the second highest value (behind #Popup) 
+*/  
+#bgPopup{  
+    display:none;   
+    position:fixed;    
+    _position:absolute; /* hack for internet explorer 6*/    
+    height:100%;    
+    width:100%;    
+    top:0;    
+    left:0;    
+    /*background:#cecece;  */ 
+    background: #999;  
+    z-index:1;    
+}    
+  
+/* 
+#Popup - The popup container 
+NOTE: if you are using z-index on the same level in the DOM -  
+    #Popup z-index needs to have the highest value. 
+*/  
+#Popup{    
+    display:none;    
+    position:fixed;  
+    background: white;
+    text-shadow: 1px 0 0 white;    
+    border:2px solid #cecece;    
+    border-radius: 6px;
+    z-index:2;    
+    padding:20px;    
+    font-size:13px;
+    width: 500px;
+    height: 410px;
+    left: 0;
+    box-shadow: 0px 0px 40px rgba(0,0,0,0.5);
+}   
+  
+/* 
+#myButton - The Button....  make it have Button-like properties 
+*/  
+#aboutButton {    
+	background: url(/img/about.png) no-repeat 0 0;
+	background-size: 30px 30px;
+	cursor:pointer;;
+    width: 30px;  
+    height: 30px; 
+    margin-top: 14px;
+    margin-bottom: 14px;
+    margin-left: 7px;
+    margin-right: 7px;
+    border: 0;
+    text-indent: -9999px;
+}  
+
+#Popup p {
+	font-size: 16px;
+	font-family: Georgia;
+	line-height: 1.4em;
+	color: #2a2a2a;
+} 
+#Popup h1 {
+	font-size: 20px;
+	color: #2a2a2a;
+}
+#Popup a {
+	font-size: 16px;
+	color: #0097c7;
+}
+
+#share {
+	float: right;
+	width: 205px;
+	height: 40px;
+	margin: auto;
+	text-align: center;
+	border-radius: 4px;
+	border: solid 1px #383838;
+	background-image: -webkit-linear-gradient(#eeeeee 0%, #ffffff 100%);
+	margin-top: 7px;
+	margin-left: 18px;
+	margin-right: 15px;
+	box-shadow: inset 0 0 6px gray;
+}
+
+#follow {
+	float: left;
+	margin: auto;
+	margin-left: 15px;
+	width: 45px;
+	padding-top: 10px;
+}
+
+#gplus {
+	float: left;
+	margin: auto;
+	margin-left: 15px;
+	width: 65px;
+	padding-top: 10px;
+}
+
+#fb-like {
+	float: left;
+	margin: auto;
+	margin-right: 15px;
+	padding-top: 10px;
+}
+
+#donate {
+	float: right;
+	margin: auto;
+	padding-top: 0;
+	padding-top: 7px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#donate input {
+	background: #767676;
+	background-image: url(/img/paypalButton.png);
+	background-size: 150px;
+	background-position: 0 0px;
+	display: block;
+	border-radius: 4px;
+	width: 150px;
+	height: 44px;
+	float: left;
+	text-indent: -9999px;
+	border: 0;
+}
+
+#donate input:hover {
+	background-position: 0 44px;
+	
+}
+
+#donate input:active {
+	background-position: 0 88px;
+	
+}
+
+#fb-like,
+#gplus,
+#follow {
+	padding-top: 10px;
+}
+
+#donateCloud {
+	width: 39px;
+	height: 15px;
+	float: left;
+	background: #fff;
+	border-radius: 2px;
+	border: solid 1px #c3c3c3;
+	margin-right: 27px;
+	padding-top: 2px;
+	font-family: Helvetica, sans-serif;
+	font-size: 12px;
+	margin-top: 1px;
+	color: #373737;
+}
+
+/* !PAGE */
+
+#page {
+	margin: auto;
+	height: auto;
+	width: 1021px;
+}
+
+a {
+	color: #b9b9b9;
+	text-decoration: none;
+	text-shadow: 1px 0px 1px white;
+}
+
+a:hover, a.a {
+	color: #474747;
+	text-decoration: black;
+	text-shadow: 1px 0px 1px white;
+}
+
+li {
+	list-style: none;
+	display: inline;
+}
+
+#box {
+	padding-top: 8px;
+	float: left;
+	color: white;
+	text-shadow: 1px 0px 1px #474747;
+	font-family: MuseoSlab-500Italic;
+	height: 25px;
+	width: 750px;
+	padding-left: 35px;
+	text-align: center;
+}
+
+#twitter {
+	padding-left: 5px;
+	padding-top: 2px;
+	float: left;
+}
+
+/*
+#mainButtons {
+	width: 1022px;
+	margin: auto;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+
+
+.b1 {
+	text-shadow: 1px 1px white;
+	color: #b9b9b9;
+	width: 50%;
+	font-size: 50px;
+	float: left;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	border-bottom: 3px solid #f6f6f6;
+	overflow: hidden;
+}
+
+.b1 em {
+	color: #b9b9b9 !important;
+	text-shadow: 1px 1px #e9e9e9;
+}
+
+.b2 {
+	text-shadow: 1px 1px #e9e9e9;
+	width: 50%;
+	color: #0097c7;
+	font-size: 50px;
+	float: left;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	text-align: center;
+	border-bottom: 3px solid #0097c7;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+	overflow: hidden;
+	-ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#f9f9f9', endColorstr = '#fffefc')";
+	background-image: -moz-linear-gradient(top, #f9f9f9, #fffefc);
+	background-image: -ms-linear-gradient(top, #f9f9f9, #fffefc);
+	background-image: -o-linear-gradient(top, #f9f9f9, #fffefc);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#f9f9f9), to(#fffefc));
+	background-image: -webkit-linear-gradient(top, #f9f9f9, #fffefc);
+	background-image: linear-gradient(top, #f9f9f9, #fffefc);
+}
+
+.b2 em {
+	color: #474747 !important;
+	text-shadow: 1px 1px #e9e9e9;
+}
+
+*/
+
+/* !TWEETS */
+
+.options {
+	float: right;
+	width: 753px;
+	height: 28px;
+    margin: auto;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#tag-img, 
+#areas-img {
+	float: left;
+	margin-left: 10px;
+}
+
+#tag-name,
+#areas-name {
+	float: left;
+	margin-left: 14px;
+	font-size: 20px;
+}
+
+.ttf1 {
+	float: left;
+	color: #474747;
+	text-align: center;
+	width: auto;
+    border-top: 3px solid #0097c7;
+    padding-top: 9px;
+    padding-bottom: 4px;
+    width: 250px;
+    font-size: 20px;
+}
+.ttf2 {
+	float:left;
+	text-align: center;
+	width: auto;
+	color: #b9b9b9;
+	border-top: 3px solid #f7f7f7;
+	padding-top: 9px;
+    width: 250px;
+    padding-bottom: 4px;
+    font-size: 20px;
+}
+
+.twideas {
+	width: 720px;
+	float: right;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 16px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	position: relative;
+	padding-left: 10px;
+	border-bottom: solid 1px #f2f2f2;
+	text-shadow: 0px 1px 1px #f2f2f2;
+}
+
+.twideas:hover {
+	background-color: #f9f9f9;
+}
+
+.twideas:first-child {
+	border: 0px;
+	height: 0px;
+	padding-top: 0px;
+	margin-top: -10px;
+}
+
+.twideas:first-child:hover {
+	background: transparent;
+}
+
+.twideas .un {
+	font-weight: bold;
+	float: left;
+	margin-left: 58px;
+	margin-right: 5px;
+}
+
+.twideas .un2 {
+	width: 100px;
+	color: gray;
+	font-size: 15px;
+	float: left;
+	height: 16px
+}
+
+.twideas .t {
+	clear:both;
+	margin-left: 58px;
+	padding-top: 3px;
+	padding-bottom: 7px;
+	padding-right: 10px;
+}
+
+#loader {
+	width: 700px;
+	float: right;
+	text-align: center;
+}
+
+#loader2 {
+	text-align: center;
+}
+
+.avatar {
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 10px;
+	border: solid 1px #f7f7f7;
+	left: 10px;
+}
+.time {
+	position: absolute;
+	right: 0px;
+	height: 16px;
+	-webkit-transition: opacity .15s ease-in-out;
+	-moz-transition: opacity .2s ease-in-out;
+	transition: opacity .15s ease-in-out;
+	color: gray;
+	font-size: 13px;
+	padding-right: 10px;
+}
+
+.phrases {
+	color: #0097c7;
+	font-family: MuseoSlab-500Italic, serif;
+	text-shadow: 1px 0px 1px white;
+	font-weight: bold;
+	font-size: 18px;
+	border-radius: 4px;
+	box-shadow: 1px 1px 1px 1px #b2a9b3 !important; 
+	background-color: #F9F9F9;
+	text-align: center;
+	padding: 5px
+	padding-bottom: 15px;
+	padding-top: 15px;
+	margin: 1px 0 1px 0;
+}
+
+.phrases-author {
+	color: #b9b9b9;
+}
+
+/* !CLOUD */
+
+#cloud {
+	float: left;
+	width: 256px;
+	color: #b9b9b9;
+	line-height: 1.8;
+	border-radius: 4px;
+	border: solid 1px #F2F2F2;
+	background: #f9f9f9;
+	margin-left: 10px;
+	position: fixed;
+}
+
+.cloudSelector {
+	height: 32px;
+	margin-bottom: 6px;
+	font-size: 18px;
+	line-height: normal;
+	width: 100%;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+.cloudSelector .tf2 {
+	float:left;
+	text-align: center;
+	width: 50%;
+	color: #b9b9b9;
+	border-top: 3px solid #f7f7f7;
+	padding-top: 9px;
+	padding-bottom: 4px;
+}
+.cloudSelector .tf2:hover {
+	float:left;
+	text-align: center;
+	width: 50%;
+	color: #b9b9b9;
+	padding-top: 9px;
+	padding-bottom: 4px;
+	color: #474747;
+	font-size: 20px;
+}
+.cloudSelector .tf1 {
+	float: left;
+	color: #474747;
+	text-align: center;
+	width: 50%;
+    border-top: 3px solid #1e1e1e; /*#0097C7*/
+    padding-top: 9px;
+    padding-bottom: 4px;
+    font-size: 20px;
+}
+
+#tags2nd {
+	padding: 0 10px 10px 10px;
+	font-size: 18px;
+	margin-top: 12px;
+}
+
+.clear {
+	clear: both;
+	height: 0px;
+	line-height: 0px;
+	visibility: hidden;
+}
+
+/* !FOOTER */
+
+#statusbar {
+	text-align: center;
+	height: 1px;
+	background-color: black;
+	color: white;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+	box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+}
+.retweeted  {
+	color: gray;
+	font-size: 14px;
+	padding-top: 2px;
+}
+#tw-widget-read, #tw-widget-best {
+	text-align: center;
+	border-top: solid 4px #f6f6f6;
+	padding-top: 10px;
+	color: #0097c7;
+}
